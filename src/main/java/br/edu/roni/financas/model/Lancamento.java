@@ -12,15 +12,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Table(name="User")
 @Entity
+@Table(name="Lancamento")
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
-  @Id
-  @GeneratedValue(strategy =  GenerationType.UUID) 
-  private UUID id;
-  private String nome;
-  private String senha;  
-  private String email;
+public class Lancamento {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
+    private String tipo;
+    private String categoria;
+    private double valor;
 }
